@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/site.css">
+    <title>Schablon-O-Mat</title>
+</head>
+<body>
+<main class="d-flex flex-column align-items-center">
+    <article class="shadow rounded-1 ">
+        <header>
+            <h2>Benutzerinteraktion</h2>
+            <button type="reset" class="btn btn-danger" id="reset">Zurücksetzen</button>
+            <button type="button" class="btn btn-success" id="copy">In die Zwischenablage</button>
+            <span id="tooltip" class="text-white shadow-sm bg-dark rounded-1 p-1"
+                  style="display: none;">
+                Kopiert!
+            </span>
+        </header>
+        <div>
+            <label>
+                <input type="text" placeholder="Bedingung" list="conditions" id="condition" class="form-control">
+                <datalist id="conditions">
+                    <option value="Wenn">Wenn</option>
+                    <option value="Sobald">Sobald</option>
+                    <option value="Solange">Solange</option>
+                    <option value="Während">Während</option>
+                    <option value="Nachdem">Nachdem</option>
+                    <option value="Bevor">Bevor</option>
+                </datalist>
+            </label>
+            <label>
+                <select id="obligation" class="form-select">
+                    <option value="muss">muss</option>
+                    <option value="sollte">sollte</option>
+                    <option value="wird">wird</option>
+                </select>
+            </label>
+            <label>
+                <input type="text" placeholder="das System" id="system" class="form-control">
+            </label>
+            <label>
+                <input type="text" placeholder="den/m Nutzer(n)" id="user" class="form-control">
+            </label>
+            <label>
+                <select id="action" required class="form-select">
+                    <option></option>
+                    <option value="erlauben">erlauben</option>
+                    <option value="die Möglichkeit bieten">die Möglichkeit bieten</option>
+                    <option value="fähig sein">fähig sein</option>
+                </select>
+            </label>
+            <label>
+                <input type="text" placeholder="Objekt" id="object" class="form-control">
+            </label>
+            <label>
+                <input type="text" placeholder="Verb" id="verb" class="form-control">
+            </label>
+        </div>
+        <footer class="pt-2 border-top border-1 border-light-subtle mt-2">
+            <h5 id="sentence"></h5>
+        </footer>
+    </article>
+    <article class="shadow rounded-1">
+        <header>
+            <h2>Selbständige Systemaktivität</h2>
+        </header>
+        <div></div>
+        <footer></footer>
+    </article>
+    <article class="shadow rounded-1">
+        <h2>Schnittstellenaktivität</h2>
+    </article>
+</main>
+
+<script src="js/bootstrap.bundle.min.js" type="application/javascript"></script>
+<script src="js/app.js" type="application/javascript"></script>
+</body>
+</html>

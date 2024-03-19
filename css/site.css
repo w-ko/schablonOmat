@@ -1,0 +1,40 @@
+:root {
+    --background: #585858;
+    --article-background: hsl(0, 0%, 90%);
+}
+
+body {
+    background-color: var(--background);
+    height: 100vh;
+    padding-top: 5em;
+}
+
+article {
+    background-color: var(--article-background);
+    min-width: 90%;
+    max-width: 90%;
+    min-height: 10em;
+    padding: 0.5em;
+
+    & + & {
+        margin-top: 1em;
+    }
+
+    h2 {
+        border-bottom: #2c3034 1px solid;
+    }
+
+    @media (min-width: 1080px) {
+        min-width: 80%;
+        max-width: 80%;
+    }
+}
+
+label + label {
+    margin-top: 0.5em;
+}
+
+.btn {
+    font-size: 0.875em;
+    padding: 0.25em 1em;
+}
